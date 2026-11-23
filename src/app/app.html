@@ -1,6 +1,13 @@
 <app-header></app-header>
-<app-navbar></app-navbar>
-<app-profil></app-profil>
-<app-friends></app-friends>
-<app-notifications></app-notifications>
+<app-navbar [(showConferences)]="showConferences"></app-navbar>
+<main>
+  <div [hidden]="showConferences">
+    <app-profil></app-profil>
+    <app-friends></app-friends>
+    <app-notifications></app-notifications>
+  </div>
+  <div [hidden]="!showConferences">
+    <app-conference-list></app-conference-list>
+  </div>
+</main>
 <app-footer></app-footer>

@@ -8,5 +8,5 @@ import { Component, signal } from '@angular/core';
 })
 export class Header {
   title = signal('Conference App');
-  msg = signal('Welcome to your user dashboard!');
+  msg = signal('Bienvenue sur votre espace utilisateur');
 }

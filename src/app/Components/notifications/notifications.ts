@@ -14,9 +14,9 @@ export class Notifications {
   ]
 
   show= false;
-  btnText = "Show Notifications";
+  btnText = "Afficher les notifications";
   ShowNotifications() {
     this.show = !this.show;
-    this.btnText = this.show ? "Hide Notifications" : "Show Notifications";
+    this.btnText = this.show ? "Masquer les notifications" : "Afficher les notifications";
   }
 }

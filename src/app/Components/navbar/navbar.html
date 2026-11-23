@@ -1,1 +1,7 @@
-<p>navbar works!</p>
+<nav aria-label="Navigation principale">
+  <button type="button" [class.active]="!showConferences()" (click)="showConferences.set(false)">Accueil</button>
+  <a href="#profil" (click)="showConferences.set(false)">Profil</a>
+  <button type="button" [class.active]="showConferences()" (click)="showConferences.set(true)">Conférences</button>
+  <a href="#amis" (click)="showConferences.set(false)">Amis</a>
+  <a href="#notifications" (click)="showConferences.set(false)">Notifications</a>
+</nav>

@@ -1,11 +1,16 @@
-<div class="input">
-    @for (item of friendsList; track item) {
-       <input type="text" [(ngModel)]="item.name" />
-    }
-</div>
-
-<ul>
-    @for (item of friendsList; track item) {
+<section id="amis" class="panel">
+  <span class="panel-icon" aria-hidden="true">👥</span>
+  <div>
+    <h2>Liste des amis</h2>
+    <div class="inputs">
+      @for (item of friendsList; track item) {
+        <input type="text" [(ngModel)]="item.name" [attr.aria-label]="'Nom de l’ami ' + ($index + 1)" />
+      }
+    </div>
+    <ul>
+      @for (item of friendsList; track item) {
         <li>{{ item.name }}</li>
-    }
-</ul>
+      }
+    </ul>
+  </div>
+</section>

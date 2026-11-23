@@ -1,0 +1,41 @@
+.panel { --accent: #12766b; --icon-background: #e4fcf8; display: block; }
+.conference-heading { display: flex; align-items: center; gap: 22px; margin-bottom: 24px; }
+.conference-heading h2 { margin: 0; }
+.conference-heading p { margin: 5px 0 0; color: #647c96; }
+input {
+  width: min(100%, 545px);
+  padding: 15px 20px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  font: inherit;
+}
+input::placeholder { color: #8296ac; font-style: italic; }
+.conference-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 235px), 1fr));
+  gap: 18px;
+}
+article { padding: 22px; border: 1px solid #d6e2f2; border-radius: 16px; background: #f6f8fa; }
+h3 { margin: 0 0 22px; font-size: 1.45rem; }
+.conference-title {
+  padding: 0;
+  border: 0;
+  color: #173e69;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+article p { margin: 0 0 18px; }
+.register {
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.available { background: #15803d; }
+.limited { background: #dc7e00; }
+.full { background: #c82329; cursor: default; }
