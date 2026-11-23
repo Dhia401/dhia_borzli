@@ -1,17 +1,60 @@
-# Prosit 1 — Conference App
+# Conferencia
 
-Lancer le projet avec `npm start` ou `ng serve`, puis ouvrir [http://127.0.0.1:4201/](http://127.0.0.1:4201/). Laisser le terminal ouvert pendant l’utilisation de l’application.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.29.
 
-## 1. Structuration de la page d’accueil
+## Development server
 
-`Home` rassemble `Profile`, `FriendList` et `Notifications`. `Header`, `Navigation` et `Footer` sont partagés entre l’accueil et la page Conférences. Chaque composant porte sa propre responsabilité et peut être utilisé dans une autre page.
+To start a local development server, run:
 
-## 2. Liste des conférences
+```bash
+ng serve
+```
 
-L’interface `Conference` définit les attributs `id`, `title`, `description`, `date`, `place`, `maxParticipants` et `nbParticipants`. La classe `ConferenceList` contient les données et les actions. Le template HTML gère leur affichage.
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-- L’interpolation `{{ ... }}` affiche les valeurs. La liaison de propriété `[disabled]` désactive l’inscription quand la conférence est complète. La liaison d’événement `(click)` incrémente `nbParticipants` à chaque inscription possible.
-- La liaison bidirectionnelle `[(ngModel)]` synchronise la saisie et le titre recherché. La recherche accepte une partie ou la totalité du titre, indépendamment de la casse.
-- Le contrôle de flux natif `@for` parcourt les conférences et `@empty` affiche un message lorsque la liste filtrée est vide. `@if` affiche la description de la conférence sélectionnée.
-- La directive `[ngClass]` applique la couleur du bouton selon les places restantes. Le bouton est vert dès 10 places, orange de 1 à 9 places et rouge à 0 place.
-- Les pipes `uppercase` et `date` affichent le titre en majuscules et la date au format `dd/MM/yyyy` sans modifier les données.
+## Code scaffolding
+
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+
+```bash
+ng generate component component-name
+```
+
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+
+```bash
+ng generate --help
+```
+
+## Building
+
+To build the project run:
+
+```bash
+ng build
+```
+
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
+## Running unit tests
+
+To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+
+```bash
+ng test
+```
+
+## Running end-to-end tests
+
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+"# WorkshopAngular_DAS" 

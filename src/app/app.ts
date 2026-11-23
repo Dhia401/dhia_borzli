@@ -1,12 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Header } from './header';
-import { Navigation } from './navigation';
-import { Footer } from './footer';
+import { Header } from './Components/header/header';
+import { Friends } from './Components/friends/friends';
+import { Footer } from './Components/footer/footer';
+import { Notifications } from './Components/notifications/notifications';
+import { Navbar } from './Components/navbar/navbar';
+import { Profil } from './Components/profil/profil';
+
 
 @Component({
   selector: 'app-root',
-  imports: [Header, Navigation, RouterOutlet, Footer],
+  imports: [RouterOutlet, Header, Friends, Footer,Navbar,Notifications,Profil],
   templateUrl: './app.html',
+  styleUrl: './app.css'
 })
-export class App {}
+export class App {
+  //protected readonly title = signal('Conferencia');
+title = "Conf"
+}

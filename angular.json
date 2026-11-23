@@ -2,11 +2,12 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "aad57b7e-3fca-41b6-a35b-129173030310"
   },
   "newProjectRoot": "projects",
   "projects": {
-    "dhia_borzli_application": {
+    "Conferencia": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -54,16 +55,12 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
-          "options": {
-            "host": "127.0.0.1",
-            "port": 4201
-          },
           "configurations": {
             "production": {
-              "buildTarget": "dhia_borzli_application:build:production"
+              "buildTarget": "Conferencia:build:production"
             },
             "development": {
-              "buildTarget": "dhia_borzli_application:build:development"
+              "buildTarget": "Conferencia:build:development"
             }
           },
           "defaultConfiguration": "development"
